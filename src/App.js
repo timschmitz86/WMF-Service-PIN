@@ -31,7 +31,7 @@ function App() {
 
   const fetchPinData = async () => {
     try {
-      const apiUrl = process.env.REACT_APP_API_URL || 'https://development.wmf-service-pin-api.trap.dev.tap.telekom.de';
+      const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3001';
       const response = await fetch(`${apiUrl}/api/pin`);
       
       if (!response.ok) {
