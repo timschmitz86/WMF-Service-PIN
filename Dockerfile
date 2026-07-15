@@ -3,6 +3,10 @@ FROM node:26-alpine AS build
 
 WORKDIR /app
 
+# Allow passing REACT_APP_API_URL at build time
+ARG REACT_APP_API_URL
+ENV REACT_APP_API_URL=${REACT_APP_API_URL}
+
 # Copy package files
 COPY package*.json ./
 
